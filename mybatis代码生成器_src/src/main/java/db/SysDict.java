@@ -1,28 +1,26 @@
 package db;
 
-import com.ffzx.commerce.framework.common.persistence.DataEntity;
-
 /**
- * 
- * @author 
- * @date 
+ * @author
  * @version 1.0
+ * @date
  */
-public class SysDict extends DataEntity<SysDict>{
+public class SysDict {
 
     private static final long serialVersionUID = 1L;
-    
-    /** 姓名*/
+
+    /**
+     * 姓名
+     */
     private String name;
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
-    
-    
-    
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }
