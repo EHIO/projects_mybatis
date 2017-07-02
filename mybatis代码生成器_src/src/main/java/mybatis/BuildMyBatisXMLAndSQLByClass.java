@@ -13,7 +13,6 @@ import com.ffzx.commerce.framework.common.persistence.BaseEntity;
 /**
  * @author li.biao
  * @ClassName BuildMyBatisXMLAndSQLByClass
- * @Description TODO
  * @date 2015-4-8
  */
 public class BuildMyBatisXMLAndSQLByClass {
