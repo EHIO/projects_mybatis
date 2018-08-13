@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.wg.mybatis.mapper.User2Mapper">
+
+    <!-- 开启本mapper的namespace下的二级缓存
+    type：指定cache接口的实现类的类型，mybatis默认使用PerpetualCache
+    要和ehcache整合，需要配置type为ehcache实现cache接口的类型
+     -->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+    <resultMap id="BaseResultMap" type="org.wg.mybatis.po.User" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="username" property="username" jdbcType="INTEGER" />
+        <result column="birthday" property="birthday" jdbcType="CHAR" />
+        <result column="sex" property="sex" jdbcType="CHAR" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+    id, username, birthday, sex, address
+    </sql>
+    <select id="listUser" parameterType="user" resultMap="BaseResultMap">
+        select 
+        <include refid="Base_Column_List"/>
+        from user
+        <trim prefix="where" prefixOverrides="AND |OR ">
+            <if test="username != null and '' != username">
+                username = #{username}
+            </if>
+            <if test="sex != null and '' != sex">
+                and sex = #{sex}
+            </if>
+        </trim>
+    </select>
+
+</mapper>
+
+

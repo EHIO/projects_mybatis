@@ -5,13 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * <p>Title: User</p>
- * <p>Description:用户po </p>
- * <p>Company: www.itcast.com</p>
  *
- * @version 1.0
- * @author 传智.燕青
- * @date 2015-4-22上午10:24:16
  */
 public class User implements Serializable {
 

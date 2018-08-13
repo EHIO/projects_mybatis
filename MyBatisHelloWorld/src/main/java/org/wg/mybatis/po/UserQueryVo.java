@@ -3,13 +3,6 @@ package org.wg.mybatis.po;
 import java.util.List;
 
 /**
- * <p>Title: UserQueryVo</p>
- * <p>Description:包装类型 </p>
- * <p>Company: www.itcast.com</p>
- *
- * @version 1.0
- * @author 传智.燕青
- * @date 2015-4-22下午4:24:44
  */
 public class UserQueryVo {
 

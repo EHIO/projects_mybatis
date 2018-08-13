@@ -1,13 +1,6 @@
 package org.wg.mybatis.po;
 
 /**
- * <p>Title: OrdersCustom</p>
- * <p>Description: 订单的扩展类</p>
- * <p>Company: www.itcast.com</p>
- *
- * @version 1.0
- * @author 传智.燕青
- * @date 2015-4-23上午10:25:47
  */
 //通过此类映射订单和用户查询的结果，让此类继承包括 字段较多的pojo类
 public class OrdersCustom extends Orders {
